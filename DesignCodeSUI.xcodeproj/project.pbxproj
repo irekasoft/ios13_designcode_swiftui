@@ -30,6 +30,7 @@
 		A3C2FD6A22EAEE7200DE4E3D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A3C2FD6C22EB3F1500DE4E3D /* HomeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListView.swift; sourceTree = "<group>"; };
 		A3C2FD6E22EB478D00DE4E3D /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		A3C2FD7022EB523300DE4E3D /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +47,7 @@
 		A31F593222E8A1D700A480B8 = {
 			isa = PBXGroup;
 			children = (
+				A3C2FD7022EB523300DE4E3D /* Readme.md */,
 				A31F593D22E8A1D700A480B8 /* DesignCodeSUI */,
 				A31F593C22E8A1D700A480B8 /* Products */,
 			);
