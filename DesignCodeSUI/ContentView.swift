@@ -17,6 +17,8 @@ struct ContentView: View {
   var body: some View {
     ZStack {
       
+      BlurView(style: .extraLight)
+      
       TitleView().blur(radius: show ? 20 : 0)
         .animation(.default)
       

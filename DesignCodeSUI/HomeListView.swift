@@ -11,17 +11,47 @@ import SwiftUI
 struct HomeListView : View {
   var body: some View {
     
-    ScrollView(showsHorizontalIndicator: false) {
-      HStack(spacing:30) {
-        ForEach(0 ..< 3) { item in
+    VStack {
+      
+      HStack {
+        
+        Rectangle()
+          .background(Color.white)
+          .frame(width: 22, height: 0)
+        
+        
+        VStack(alignment: .leading) {
+            Text("Courses")
+                .font(.largeTitle)
+                .fontWeight(.heavy)
           
-          PresentationButton(destination: ContentView()){
-            CourseCardView()
-          }
+                Text("22 Courses")
+                .color(.gray)
+          
           
         }
+        Spacer()
+        
       }
-      .padding(.leading, 30)
+      .padding(.leading, 40)
+      
+      Rectangle()
+        .background(Color.white)
+        .frame(width: 0, height: 22)
+      
+      
+      ScrollView(showsHorizontalIndicator: false) {
+        HStack(spacing:30) {
+          ForEach(0 ..< 3) { item in
+            
+            PresentationButton(destination: ContentView()){
+              CourseCardView()
+            }
+            
+          }
+          }
+          .padding(.leading, 30)
+      }
     }
     
     

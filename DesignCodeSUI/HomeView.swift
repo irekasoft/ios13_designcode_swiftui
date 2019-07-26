@@ -11,27 +11,34 @@ import SwiftUI
 struct HomeView : View {
   
   @State var showMenu = false
-  
   @State var showProfile = false
   
   var body: some View {
     
     ZStack {
       
+      HomeListView()
+        .padding(.top, 76)
+        .blur(radius: showMenu ? 20 : 0)
+        .scaleEffect( showProfile ? 0.95 : 1)
+        .animation(.default)
+      
       ContentView()
-        .background(Color.white)
+//        .background(Color.white)
         .cornerRadius(30)
         .shadow(radius: 20)
         .animation(.fluidSpring())
-        .offset(y: showProfile ? 0 : UIScreen.main.bounds.height)
+        .offset(y: showProfile ? 40 : UIScreen.main.bounds.height)
       
-      MenuButton(showMenu: $showMenu).offset(x: -30, y: showProfile ? 0: 80)
-      .animation(.spring())
+      
       
       MenuRight(show: $showProfile).offset(x: -16, y: showProfile ? 0: 88)
       .animation(.spring())
       
       MenuView(showMenu: $showMenu)
+      
+      MenuButton(showMenu: $showMenu).offset(x: -30, y: showProfile ? 0: 80)
+        .animation(.spring())
       
       
     }
@@ -110,7 +117,7 @@ struct MenuView : View {
       Spacer()
       
       }
-      .padding(.top, 60)
+      .padding(.top, 110)
       .padding(30)
       .frame(minWidth: 0, maxWidth: CGFloat.infinity)
       .background(Color.white)
